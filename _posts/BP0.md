@@ -1,17 +1,9 @@
----
-layout: post
-title: Blog Post 0
----
-
-This post is a tutorial explaining how to construct an interesting data visualization of the Palmer Penguins data set.
-
-### Importing data
-First of all, the data is imported into Python by runnning the following 
 ```python
 import pandas as pd
 url = "https://raw.githubusercontent.com/PhilChodrow/PIC16B/master/datasets/palmer_penguins.csv"
 penguins = pd.read_csv(url)
 ```
+
 ### Plotly Express
 I am going to plot a simple histogram using *plotly express*, showing the number of eggs on each date by species and island:
 
@@ -32,7 +24,6 @@ fig.show()
 
 
 
-### Facet
 Then, I am going to make the plot slightly fancier by grouping the data into subsets using **facetting**.
 Facetting refers to creating multiple, small plots, each of which display a subset of the data. Plotly supports the easy creation of facets using the `facet_col` and `facet_row` arguments. In this case, I will simply group the data by island:
 
@@ -50,7 +41,6 @@ fig.show()
 
 
 
-### Styling
 Now, let's make the plot prettier by using `fig.update layout`. I am going to make the following changes:
 1. adjust the white space using `margin`
 2. change the plot size using `width` and `height` arguments
